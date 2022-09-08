@@ -16,12 +16,13 @@ su -c 'modprobe -r pcspkr && echo "blacklist pcspkr" >> /etc/modprobe.d/50-black
 
 echo -e "${blue}Instalando aplicativos gerais e dependências";
 sleep 2s;
-sudo pacman -S yay thunar kate wget unzip pcmanfm picom rofi polybar lxappearance sqlite3 alacritty nitrogen discord flatpak spotify plank onlyoffice flameshot zscroll playerctl npm ttf-ms-fonts iriunwebcam-bin gtop ruby gksu nautilus autotiling gnome-boxes
+sudo pacman -S yay alacritty thunar kate wget unzip pcmanfm picom rofi polybar lxappearance nitrogen discord flatpak spotify plank onlyoffice flameshot zscroll playerctl ttf-ms-fonts iriunwebcam-bin gtop ruby gksu nautilus autotiling gnome-boxes ncspot sqlite3  
 flatpak install flathub org.telegram.desktop
 flatpak install flathub com.obsproject.Studio
-flatpak install flathub org.audacityteam.Audacity
 flatpak install flathub org.gnome.Calendar
 flatpak install flathub org.gnome.Calculator
+flatpak install flathub org.videolan.VLC
+flatpak install flathub org.audacityteam.Audacity
 gem install colorls
 
 echo -e "${blue}Instalando o Chrome";
