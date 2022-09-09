@@ -21,22 +21,17 @@ bottom = false
 fixed-center = true
 
 width = 100%
-height = 24
-offset-x = 0
-offset-y = 0
+height = 22
+offset-x = 0%
+offset-y = 0%
 
 background = ${color.BACKGROUND}
 foreground = ${color.FOREGROUND}
-
-radius-top = 0.0
-radius-bottom = 0.0
-
+radius = 14
 line-size = 2
-line-color = ${color.BLUE}
-
+# line-color = ${color.BLUE}
 border-size = 4
 border-color = ${color.BACKGROUND}
-
 padding = 1
 module-margin-left = 0
 module-margin-right = 0
@@ -54,9 +49,8 @@ font-4 = "archcraft:size=11;4"
 ;font-4 = "archcraft:size=14;4"
 
 modules-left = i3 sep title 
-# menu sep
 modules-center = 
-modules-right = volume sep backlight sep temperature sep date
+modules-right = volume sep backlight sep temperature sep battery sep date
 ;modules-right = spotify sep volume sep backlight sep battery sep network sep date sep sysmenu 
 ;network pacman-updates  keyboard sep memory sep battery sep cpu sep
 
@@ -86,15 +80,24 @@ scroll-down = bspc desktop -f next.local
 [settings]
 throttle-output = 5
 throttle-output-for = 10
-throttle-input-for = 30
-
 screenchange-reload = false
-
 compositing-background = source
 compositing-foreground = over
 compositing-overline = over
 compositing-underline = over
 compositing-border = over
+
+; Define fallback values used by all module formats
+;format-foreground = 
+;format-background = 
+;format-underline =
+;format-overline =
+;format-spacing =
+;format-padding =
+;format-margin =
+;format-offset =
+
+pseudo-transparency = false
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 ;;	    __________  ______

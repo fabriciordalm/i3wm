@@ -229,8 +229,8 @@ bindsym $mod+Shift+o bar mode toggle
 for_window [class="^.*"] border pixel 1
 new_window 1pixel
 
-# class                 border  backgr. text    indicator
-client.focused          #556064 #556064 #fdf6e3 #FDF6E3 #556064
+# class                 border  backgr. text    indicator window
+client.focused          #556064 #556064 #fdf6e3 #FDF6E3   #919b9e
 client.unfocused        #073642 #2E3440 #fdf6e3 #073642
 #client.focused #cccccc #cccccc #cccccc #cccccc   #cccccc
 
@@ -254,6 +254,7 @@ exec --no-startup-id numlockx on
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id "picom --config /home/fabricio/.config/picom/picom.conf"
 exec --no-startup-id polkit-xfce-authentication-agent-1
+exec_always --no-startup-id autotiling
 exec_always --no-startup-id clipit
 # exec --no-startup-id clipman
 # exec --no-startup-id flameshot
