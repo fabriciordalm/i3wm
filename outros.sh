@@ -28,7 +28,7 @@ gem install colorls
 echo -e "${blue}Instalando fontes";
 sleep 2s;
 sudo pacman -S ttf-iosevka ttf-jetbrains-mono noto-fonts-cjk noto-fonts-emoji noto-fonts ttf-freefont ttf-ms-fonts ttf-linux-libertine ttf-dejavu ttf-inconsolata ttf-ubuntu-font-family &&
-fc-cache -f -v # caso erro:
+fc-cache -f -v 
 
 echo -e "${blue}Instalando o Chrome";
 sleep 2s;
@@ -50,7 +50,7 @@ echo -e "${green}Instalando Python, Pip e bibliotecas";
 sleep 2s;
 sudo pacman -S python-pip &&
 python -m pip install --upgrade pip &&
-pip install -U plotly dash pandas numpy matplotlib seaborn jupyter jupyterlab jupyter_dash black pytrends geopandas geobr lxml bokeh reportlab selenium scikit-learn pydot faker nodejs pillow wordcloud altair ggplot vega_datasets bandit pylint plotnine xgboost dask pyarrow psycopg2-binary dbus-python torch
+pip install -U plotly pandas numpy matplotlib seaborn==0.12.0 jupyter jupyterlab jupyter_dash black pytrends geopandas geobr lxml bokeh reportlab selenium scikit-learn pydot faker nodejs pillow wordcloud altair ggplot vega_datasets bandit pylint plotnine xgboost dask pyarrow psycopg2-binary dbus-python torch dash
 
 echo -e "${green}Instalando R e Rstudio";
 sleep 2s;
