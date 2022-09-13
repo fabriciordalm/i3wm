@@ -11,8 +11,8 @@ sudo pacman -Su && sudo pacman -Syu && sudo pacman -Syyu && sudo pacman -Sy
 
 echo -e "${green}Algumas configurações";
 sleep 2s;
-mkdir -p Pessoal && # Criando pasta pessoal
-su -c 'modprobe -r pcspkr && echo "blacklist pcspkr" >> /etc/modprobe.d/50-blacklist.conf' # Beep: off
+mkdir -p Pessoal && 
+su -c 'modprobe -r pcspkr && echo "blacklist pcspkr" >> /etc/modprobe.d/50-blacklist.conf'
 
 echo -e "${blue}Instalando aplicativos gerais e dependências";
 sleep 2s;
@@ -25,19 +25,26 @@ flatpak install flathub org.videolan.VLC
 flatpak install flathub org.audacityteam.Audacity
 gem install colorls
 
+echo -e "${blue}Instalando fontes";
+sleep 2s;
+sudo pacman -S ttf-iosevka ttf-jetbrains-mono noto-fonts-cjk noto-fonts-emoji noto-fonts ttf-freefont ttf-ms-fonts ttf-linux-libertine ttf-dejavu ttf-inconsolata ttf-ubuntu-font-family &&
+fc-cache -f -v # caso erro:
+
 echo -e "${blue}Instalando o Chrome";
 sleep 2s;
 cd Downloads &&
 git clone https://aur.archlinux.org/google-chrome.git &&
 cd google-chrome &&
-makepkg -si
+makepkg -si &&
+cd
 
 echo -e "${blue}Instalando Visual Studio Code";
 sleep 2s;
 cd Downloads &&
 git clone https://aur.archlinux.org/visual-studio-code-bin.git &&
 cd visual-studio-code-bin &&
-makepkg -si
+makepkg -si &&
+cd
 
 echo -e "${green}Instalando Python, Pip e bibliotecas";
 sleep 2s;
