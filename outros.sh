@@ -16,7 +16,7 @@ su -c 'modprobe -r pcspkr && echo "blacklist pcspkr" >> /etc/modprobe.d/50-black
 
 echo -e "${blue}Instalando aplicativos gerais e dependências";
 sleep 2s;
-sudo pacman -S yay alacritty thunar kate wget unzip pcmanfm picom rofi polybar lxappearance nitrogen discord flatpak spotify plank onlyoffice flameshot zscroll playerctl ttf-ms-fonts iriunwebcam-bin gtop ruby gksu nautilus autotiling gnome-boxes ncspot sqlite3  
+sudo pacman -S yay alacritty thunar kate wget unzip pcmanfm picom rofi polybar lxappearance nitrogen discord flatpak spotify plank onlyoffice flameshot zscroll playerctl ttf-ms-fonts iriunwebcam-bin gtop ruby gksu nautilus autotiling gnome-boxes ncspot sqlite3 atril viewnior 
 flatpak install flathub org.telegram.desktop
 flatpak install flathub com.obsproject.Studio
 flatpak install flathub org.gnome.Calendar
