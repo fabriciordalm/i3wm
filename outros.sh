@@ -50,7 +50,7 @@ echo -e "${green}Instalando Python, Pip e bibliotecas";
 sleep 2s;
 sudo pacman -S python-pip &&
 python -m pip install --upgrade pip &&
-pip install -U plotly pandas numpy matplotlib seaborn==0.12.0 jupyter jupyterlab jupyter_dash black pytrends geopandas geobr lxml bokeh reportlab selenium scikit-learn pydot faker nodejs pillow wordcloud altair ggplot vega_datasets bandit pylint plotnine xgboost dask pyarrow psycopg2-binary dbus-python torch dash
+pip install -U pandas pyspark numpy matplotlib seaborn==0.12.0 bokeh altair plotnine plotly dash torch selenium scikit-learn jupyter jupyterlab jupyter_dash black pytrends geopandas geobr lxml reportlab pydot faker nodejs pillow wordcloud vega_datasets bandit pylintxgboost dask pyarrow psycopg2-binary dbus-python
 
 echo -e "${green}Instalando R e Rstudio";
 sleep 2s;
