@@ -11,6 +11,7 @@ sudo pacman -Su && sudo pacman -Syu && sudo pacman -Syyu && sudo pacman -Sy
 
 echo -e "${green}Algumas configurações";
 sleep 2s;
+cd &&
 mkdir -p Pessoal && 
 su -c 'modprobe -r pcspkr && echo "blacklist pcspkr" >> /etc/modprobe.d/50-blacklist.conf'
 
@@ -27,11 +28,12 @@ gem install colorls
 
 echo -e "${blue}Instalando fontes";
 sleep 2s;
-sudo pacman -S ttf-ms-fonts ttf-iosevka ttf-jetbrains-mono noto-fonts-cjk noto-fonts-emoji noto-fonts ttf-freefont ttf-ms-fonts ttf-linux-libertine ttf-dejavu ttf-inconsolata ttf-ubuntu-font-family &&
+sudo pacman -S ttf-ms-fonts ttf-fira-sans ttf-iosevka ttf-jetbrains-mono noto-fonts-cjk noto-fonts-emoji noto-fonts ttf-freefont ttf-ms-fonts ttf-linux-libertine ttf-dejavu ttf-inconsolata ttf-ubuntu-font-family &&
 fc-cache -f -v 
 
-echo -e "${blue}Instalando o Chrome";
+echo -e "${green}Instalando o Chrome";
 sleep 2s;
+cd &&
 cd Downloads &&
 git clone https://aur.archlinux.org/google-chrome.git &&
 cd google-chrome &&
@@ -52,12 +54,12 @@ sudo pacman -S python-pip &&
 python -m pip install --upgrade pip &&
 pip install -U pandas pyspark numpy matplotlib seaborn==0.12.0 bokeh altair plotnine plotly dash torch selenium scikit-learn jupyter jupyterlab jupyter_dash black pytrends geopandas geobr lxml reportlab pydot faker nodejs pillow wordcloud vega_datasets bandit pylintxgboost dask pyarrow psycopg2-binary dbus-python
 
-echo -e "${green}Instalando R e Rstudio";
+echo -e "${blue}Instalando R e Rstudio";
 sleep 2s;
 sudo pacman -S r &&
 yay -S rstudio-desktop-bin
 
-echo -e "${blue}Instalando temas e icones";
+echo -e "${green}Instalando temas e icones";
 sleep 2s;
 sudo pacman -S arc-gtk-theme arc-icon-theme
 
