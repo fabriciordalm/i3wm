@@ -16,7 +16,7 @@ su -c 'modprobe -r pcspkr && echo "blacklist pcspkr" >> /etc/modprobe.d/50-black
 
 echo -e "${blue}Instalando aplicativos gerais e dependências";
 sleep 2s;
-sudo pacman -S yay alacritty thunar kate wget unzip pcmanfm picom rofi polybar lxappearance nitrogen discord flatpak spotify plank onlyoffice flameshot zscroll playerctl ttf-ms-fonts iriunwebcam-bin gtop ruby gksu nautilus autotiling gnome-boxes ncspot sqlite3 atril viewnior grub-customizer 
+sudo pacman -S yay alacritty thunar kate wget unzip pcmanfm picom rofi polybar lxappearance nitrogen discord flatpak spotify plank onlyoffice flameshot zscroll playerctl iriunwebcam-bin gtop ruby gksu nautilus autotiling gnome-boxes ncspot sqlite3 atril viewnior grub-customizer 
 flatpak install flathub org.telegram.desktop
 flatpak install flathub com.obsproject.Studio
 flatpak install flathub org.gnome.Calendar
@@ -27,7 +27,7 @@ gem install colorls
 
 echo -e "${blue}Instalando fontes";
 sleep 2s;
-sudo pacman -S ttf-iosevka ttf-jetbrains-mono noto-fonts-cjk noto-fonts-emoji noto-fonts ttf-freefont ttf-ms-fonts ttf-linux-libertine ttf-dejavu ttf-inconsolata ttf-ubuntu-font-family &&
+sudo pacman -S ttf-ms-fonts ttf-iosevka ttf-jetbrains-mono noto-fonts-cjk noto-fonts-emoji noto-fonts ttf-freefont ttf-ms-fonts ttf-linux-libertine ttf-dejavu ttf-inconsolata ttf-ubuntu-font-family &&
 fc-cache -f -v 
 
 echo -e "${blue}Instalando o Chrome";
@@ -40,6 +40,7 @@ cd
 
 echo -e "${blue}Instalando Visual Studio Code";
 sleep 2s;
+cd &&
 cd Downloads &&
 git clone https://aur.archlinux.org/visual-studio-code-bin.git &&
 cd visual-studio-code-bin &&
