@@ -40,7 +40,6 @@ cd
 
 echo -e "${blue}Instalando Visual Studio Code";
 sleep 2s;
-cd &&
 cd Downloads &&
 git clone https://aur.archlinux.org/visual-studio-code-bin.git &&
 cd visual-studio-code-bin &&
